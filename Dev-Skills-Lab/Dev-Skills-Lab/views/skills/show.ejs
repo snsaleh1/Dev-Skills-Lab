@@ -10,7 +10,9 @@
 <body>
   <h1>Skillz #<%= skillNum %></h1>
   <h3><%= skill.skill %></h3>
+  <form action="/skills/<%= skill.skill %>?_method=DELETE" method="POST" class="delete-form">
+    <button type="submit">X</button>
   <h3>Complete: <%= skill.done ? 'Yes' : 'Nope' %></h3>
-  <a href="/skills/<%= skillNum - 1 %>/edit">Edit</a>
+  <a href="/skill/<%= skillNum - 1 %>/edit">Edit</a>
 </body>
 </html>
